@@ -1,0 +1,103 @@
+
+Message                                                                                                                                        NoNewLine ForegroundCol
+                                                                                                                                                                    or
+-------                                                                                                                                        --------- -------------
+=== shepherd-task simple-math run ===                                                                                                              False          Cyan
+Repository:          edburns/dd-3070093-simple-math-win32-x64-01                                                                                   False          Gray
+Workareas directory: C:\Users\edburns\workareas                                                                                                    False          Gray
+Fixture root:        C:\Users\edburns\.copilot\plugins\shepherd-task\test\simple-math                                                              False          Gray
+Primary checkout:    C:\Users\edburns\workareas\dd-3070093-simple-math-win32-x64-01-shepherd-target                                                False          Gray
+Control worktree:    C:\Users\edburns\workareas\dd-3070093-simple-math-win32-x64-01-shepherd-control                                               False          Gray
+Baseline branch:     experiment/shepherd-shared-baseline                                                                                           False          Gray
+Control branch:      experiment/shepherd-control                                                                                                   False          Gray
+                                                                                                                                                   False          Gray
+[shepherd] Canonical lifecycle: Stage 00 -> Stage 10 -> research gate -> Stage 15 -> Stage 20 -> Stage 25 -> Stage 30 -> Stage 40 -> Stage 50.     False          Gray
+[shepherd] Stage 10 and the human/Copilot research gate are not run live.                                                                          False          Gray
+[shepherd] This deterministic simple-math control fixture writes an already-resolved plan in their place.                                          False          Gray
+[shepherd] Repository setup, offline contracts, and final verification are experiment operations, not shepherd-task stages.                        False          Gray
+[shepherd] Experiment setup: validating prerequisites.                                                                                             False         White
+[shepherd] Experiment setup: running offline contracts.                                                                                            False         White
+[shepherd] Experiment setup: checking the disposable repository.                                                                                   False         White
+[shepherd] Experiment setup: cloning the primary checkout.                                                                                         False         White
+[shepherd] Experiment setup: creating the immutable simple-math baseline.                                                                          False         White
+[shepherd] Experiment setup: creating the control worktree.                                                                                        False         White
+                                                                                                                                                   False          Gray
+[shepherd] Stage 00 - Initialize campaign                                                                                                          False          Cyan
+[shepherd] Planned invocation of shepherd-task-00-init-campaign.ps1:                                                                               False      DarkGray
+  & 'C:\Users\edburns\.copilot\plugins\shepherd-task\scripts\shepherd-task-00-init-campaign.ps1' `                                                 False      DarkGray
+      -CampaignIssueNumber <CAMPAIGN_ISSUE_NUMBER> `                                                                                               False      DarkGray
+      -CampaignShortname 'math-control' `                                                                                                          False      DarkGray
+      -BaseBranch 'experiment/shepherd-control' `                                                                                                  False      DarkGray
+      -Repo 'edburns/dd-3070093-simple-math-win32-x64-01'                                                                                          False      DarkGray
+[shepherd] Creating campaign issue 1 in https://github.com/edburns/dd-3070093-simple-math-win32-x64-01                                             False         White
+                                                                                                                                                   False          Gray
+[shepherd] Stage 00 - Initialize campaign                                                                                                          False          Cyan
+[shepherd] Actual invocation of shepherd-task-00-init-campaign.ps1:                                                                                False       Magenta
+  & 'C:\Users\edburns\.copilot\plugins\shepherd-task\scripts\shepherd-task-00-init-campaign.ps1' `                                                 False       Magenta
+      -CampaignIssueNumber '1' `                                                                                                                   False       Magenta
+      -CampaignShortname 'math-control' `                                                                                                          False       Magenta
+      -BaseBranch 'experiment/shepherd-control' `                                                                                                  False       Magenta
+      -Repo 'edburns/dd-3070093-simple-math-win32-x64-01'                                                                                          False       Magenta
+                                                                                                                                                   False          Gray
+[shepherd] Stage 10 - Create ignorance-reduction plan                                                                                              False          Cyan
+[shepherd] Normal usage invokes skill shepherd-task-10-create-ignorance-reduction-plan.                                                            False          Gray
+[shepherd] Human and Copilot research then fills every implementation-gating Resolution block.                                                     False          Gray
+[shepherd] This simple-math fixture substituted an already-resolved math-tool-ignorance-reduction-plan.md for Stage 10 and the research gate.      False          Gray
+[shepherd] Working directory: C:\Users\edburns\workareas\dd-3070093-simple-math-win32-x64-01-shepherd-control                                      False          Gray
+                                                                                                                                                   False          Gray
+[shepherd] Stage 15 - Prepare Stage 20                                                                                                             False          Cyan
+[shepherd] Planned invocation of shepherd-task-15-prepare-create-issues.ps1:                                                                       False      DarkGray
+  & 'C:\Users\edburns\.copilot\plugins\shepherd-task\scripts\shepherd-task-15-prepare-create-issues.ps1' `                                         False      DarkGray
+      -CampaignMetadataDirectory '1-math-control-remove-before-merge' `                                                                            False      DarkGray
+      -PassThru                                                                                                                                    False      DarkGray
+                                                                                                                                                   False          Gray
+[shepherd] Stage 20 - Create issues from the resolved plan                                                                                         False          Cyan
+[shepherd] Stage 15 will generate a launcher that invokes skill shepherd-task-20-create-issues-from-plan.                                          False          Gray
+                                                                                                                                                   False          Gray
+[shepherd] Stage 25 - Dispatch ordered issue list after Stage 20                                                                                   False          Cyan
+[shepherd] Planned invocation of shepherd-task-25-given-list.ps1:                                                                                  False      DarkGray
+  & 'C:\Users\edburns\.copilot\plugins\shepherd-task\scripts\shepherd-task-25-given-list.ps1' `                                                    False      DarkGray
+      -TaskIssues <TASK_ISSUE_LIST> `                                                                                                              False      DarkGray
+      -CampaignMetadataDirectory '1-math-control-remove-before-merge'                                                                              False      DarkGray
+[shepherd] Working directory: C:\Users\edburns\workareas\dd-3070093-simple-math-win32-x64-01-shepherd-control                                      False          Gray
+                                                                                                                                                   False          Gray
+[shepherd] Stage 15 - Prepare Stage 20                                                                                                             False          Cyan
+[shepherd] Actual invocation of shepherd-task-15-prepare-create-issues.ps1:                                                                        False       Magenta
+  & 'C:\Users\edburns\.copilot\plugins\shepherd-task\scripts\shepherd-task-15-prepare-create-issues.ps1' `                                         False       Magenta
+      -CampaignMetadataDirectory '1-math-control-remove-before-merge' `                                                                            False       Magenta
+      -PassThru                                                                                                                                    False       Magenta
+[shepherd] Stage 20 completed through the generated launcher, and the fixture verified both issue bodies.                                          False         White
+                                                                                                                                                   False          Gray
+[shepherd] Stage 25 - Dispatch ordered issue list                                                                                                  False          Cyan
+[shepherd] Actual invocation of shepherd-task-25-given-list.ps1:                                                                                   False       Magenta
+  & 'C:\Users\edburns\.copilot\plugins\shepherd-task\scripts\shepherd-task-25-given-list.ps1' `                                                    False       Magenta
+      -TaskIssues '2,3' `                                                                                                                          False       Magenta
+      -CampaignMetadataDirectory '1-math-control-remove-before-merge'                                                                              False       Magenta
+[shepherd] Stage 25 will process issues 2,3 serially.                                                                                              False         White
+[shepherd] For each issue, Stage 30 moves assignment to the Ready-for-review boundary, then Stage 40 reviews and merges it.                        False          Gray
+[shepherd] Stage 50 creates the campaign post-mortem after success or failure.                                                                     False          Gray
+[shepherd] Run evidence will be written beneath: C:\Users\edburns\workareas\dd-3070093-simple-math-win32-x64-01-shepherd-control\1-math-contr…     False          Gray
+[shepherd] Detailed per-issue output is hidden; use -ShowShepherdTaskScriptOutput to display it.
+[shepherd] Stage 25 completed successfully for both issues.                                                                                        False         Green
+[shepherd] Experiment verification: synchronizing and checking the completed campaign.                                                             False         White
+[shepherd] Experiment verification: collecting final evidence.                                                                                     False         White
+                                                                                                                                                   False          Gray
+=== CAMPAIGN LESSONS ===                                                                                                                           False         Green
+# Campaign lessons
+
+This file contains validated, reusable lessons for subsequent issues in this campaign.
+The issue specification and repository instructions remain authoritative.
+
+## Validated lessons
+
+No validated lessons have been recorded yet.
+                                                                                                                                                   False          Gray
+=== RUN COMPLETE ===                                                                                                                               False         Green
+Repository:               https://github.com/edburns/dd-3070093-simple-math-win32-x64-01                                                           False          Gray
+Baseline SHA:             56e896c3d55d7c7940a8ac9bcf4eda062e6f731e                                                                                 False          Gray
+Issues:                   2,3                                                                                                                      False          Gray
+Run directory:            C:\Users\edburns\workareas\dd-3070093-simple-math-win32-x64-01-shepherd-control\1-math-control-remove-before-merge\…     False          Gray
+Post-mortem:              C:\Users\edburns\workareas\dd-3070093-simple-math-win32-x64-01-shepherd-control\1-math-control-remove-before-merge\…     False          Gray
+Machine-readable summary: C:\Users\edburns\workareas\dd-3070093-simple-math-win32-x64-01-shepherd-control-20260927-2111.json                       False          Gray
+All evidence and worktrees were preserved. No cleanup was performed.                                                                               False          Gray
+
