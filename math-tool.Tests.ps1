@@ -8,6 +8,7 @@ Describe 'Get-Fibonacci' {
         @{ N = 0; Expected = 0 }
         @{ N = 1; Expected = 1 }
         @{ N = 6; Expected = 8 }
+        @{ N = 100; Expected = [System.Numerics.BigInteger]::Parse('354224848179261915075') }
     ) {
         param($N, $Expected)
 
@@ -24,6 +25,7 @@ Describe 'math-tool CLI' {
         @{ N = 0; Expected = 0 }
         @{ N = 1; Expected = 1 }
         @{ N = 6; Expected = 8 }
+        @{ N = 100; Expected = [System.Numerics.BigInteger]::Parse('354224848179261915075') }
     ) {
         param($N, $Expected)
 
