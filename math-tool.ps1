@@ -19,7 +19,10 @@ param(
                 [ref]$parsed
             )
     })]
-    [object]$N = 0
+    [object]$N = 0,
+
+    [ValidateSet('fibonacci', 'factorial')]
+    [string]$Operation = 'fibonacci'
 )
 
 function Test-NonNegativeInt64 {
@@ -68,8 +71,35 @@ function Get-Fibonacci {
     return $previous
 }
 
+function Get-Factorial {
+    [OutputType([System.Numerics.BigInteger])]
+    param(
+        [Parameter(Mandatory)]
+        [ValidateScript({ Test-NonNegativeInt64 -Value $_ })]
+        [object]$N
+    )
+
+    [long]$validatedN = $N
+    [System.Numerics.BigInteger]$result = 1
+
+    for ([long]$index = 2; $index -le $validatedN; $index++) {
+        $result *= $index
+    }
+
+    return $result
+}
+
 if ($MyInvocation.InvocationName -ne '.') {
     [long]$validatedN = $N
-    $value = Get-Fibonacci -N $validatedN
-    Write-Output "Fibonacci($validatedN) = $value"
+
+    switch ($Operation) {
+        'factorial' {
+            $value = Get-Factorial -N $validatedN
+            Write-Output "Factorial($validatedN) = $value"
+        }
+        default {
+            $value = Get-Fibonacci -N $validatedN
+            Write-Output "Fibonacci($validatedN) = $value"
+        }
+    }
 }
