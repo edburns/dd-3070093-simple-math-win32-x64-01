@@ -1,6 +1,12 @@
 BeforeAll {
     $scriptPath = Join-Path $PSScriptRoot 'math-tool.ps1'
-    . $scriptPath
+    $dotSourceOutput = . $scriptPath
+}
+
+Describe 'math-tool loading' {
+    It 'writes no output when dot-sourced' {
+        $dotSourceOutput | Should -BeNullOrEmpty
+    }
 }
 
 Describe 'Get-Fibonacci' {
@@ -17,6 +23,10 @@ Describe 'Get-Fibonacci' {
 
     It 'rejects negative inputs' {
         { Get-Fibonacci -N -1 } | Should -Throw
+    }
+
+    It 'rejects fractional inputs' {
+        { Get-Fibonacci -N 1.5 } | Should -Throw
     }
 }
 
@@ -37,5 +47,15 @@ Describe 'math-tool CLI' {
         (Get-Content -LiteralPath $standardErrorPath -Raw) | Should -BeNullOrEmpty
         @($standardOutput).Count | Should -Be 1
         $standardOutput | Should -Be "Fibonacci($N) = $Expected"
+    }
+
+    It 'rejects fractional inputs' {
+        $standardErrorPath = Join-Path $TestDrive 'math-tool-fractional.stderr'
+        $standardOutput = & pwsh -NoLogo -NoProfile -File $scriptPath -N 1.5 2> $standardErrorPath
+        $exitCode = $LASTEXITCODE
+
+        $exitCode | Should -Not -Be 0
+        $standardOutput | Should -BeNullOrEmpty
+        (Get-Content -LiteralPath $standardErrorPath -Raw) | Should -Not -BeNullOrEmpty
     }
 }
