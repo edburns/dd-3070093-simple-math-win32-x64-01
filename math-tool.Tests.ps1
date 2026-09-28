@@ -1,6 +1,6 @@
 BeforeAll {
     $scriptPath = Join-Path $PSScriptRoot 'math-tool.ps1'
-    . $scriptPath -N 0
+    . $scriptPath
 }
 
 Describe 'Get-Fibonacci' {
